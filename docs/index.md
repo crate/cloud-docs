@@ -138,6 +138,7 @@ your favorite client library to connect to a CrateDB cluster.
 :titlesonly:
 :hidden:
 
+All Features <feature/index>
 Quick Start <tutorials/quick-start>
 Services <reference/services>
 Import <cluster/import>
