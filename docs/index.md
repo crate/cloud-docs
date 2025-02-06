@@ -155,6 +155,7 @@ Backups <cluster/backups>
 Manage Cluster <cluster/manage>
 Billing <organization/billing>
 Access Management <organization/access-management>
+Networking & Connectivity <reference/networking>
 API <organization/api>
 How Tos <howtos/index>
 Croud CLI <tutorials/deploy/croud>
