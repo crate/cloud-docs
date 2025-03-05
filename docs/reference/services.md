@@ -21,6 +21,7 @@ _non-critical workloads_
 - Up to 12 GiB RAM
 - Up to 1 TiB storage
 - Backups (once per day)
+- Single-AZ
 - Development support
 :::
 
@@ -32,6 +33,7 @@ _production workloads_
 - Up to 495 GiB RAM
 - Up to 72 TiB storage
 - Backups (once per hour)
+- Multi-AZ
 - Basic Support
 
 ---
@@ -138,11 +140,19 @@ nodes, the overall cluster size can be scaled up to the following limits:
 | Dedicated | CR4    | up to 144  | up to 495 GiB   | up to 72 TiB |
 :::
 
-**Recommended Setup for High Availability**<br>
-While it's possible to start with just one node, for applications needing high
-availability and fault tolerance, we recommend using at least 3 nodes. This
-ensures that your data is safely replicated and that the cluster can handle
-node failures gracefully.
+**High Availability**<br>
+While it’s possible to start with just one node, for applications requiring high
+availability and fault tolerance, we recommend using at least three nodes. This
+ensures data replication and allows the cluster to handle node failures gracefully.
+
+Dedicated nodes are automatically deployed across three availability zones,
+and the specific zone for each node cannot be manually configured. A single
+dedicated node is placed in one zone, two nodes are distributed across two
+zones, and three or more nodes utilize all three availability zones, with nodes
+distributed as uniformly as possible. While a node count that is a multiple of
+three (e.g., 3, 6, 9, 12, etc.) provides optimal distribution across zones, it
+is not strictly required for high availability.
+
 
 ## Custom
 
