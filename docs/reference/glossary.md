@@ -1,17 +1,14 @@
 (glossary)=
 # Glossary
 
-This article is a glossary. It is meant to provide a general overview
-about the terminology used by CrateDB Cloud products.
-
-The glossary will support you understanding the basic meaning of
+This glossary will support you understanding the basic meaning of
 concepts in the CrateDB Cloud Console and its documentation, the Croud
 CLI, and other resources related to CrateDB Cloud. The items are
 presented in alphabetical order.
 
 :::{note}
 While learning about CrateDB Cloud, please also visit the {ref}`CrateDB
-glossary <crate-reference:appendix-glossary>`It enumerates 
+glossary <crate-reference:appendix-glossary>`. It describes 
 all terms related to the CrateDB database in general.
 :::
 
