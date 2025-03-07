@@ -1,10 +1,9 @@
 (glossary)=
 # Glossary
 
-This glossary will support you understanding the basic meaning of
-concepts in the CrateDB Cloud Console and its documentation, the Croud
-CLI, and other resources related to CrateDB Cloud. The items are
-presented in alphabetical order.
+This glossary describes the concepts in the CrateDB Cloud Console
+and its documentation, the Croud CLI, and other resources related
+to CrateDB Cloud. The items are presented in alphabetical order.
 
 :::{note}
 While learning about CrateDB Cloud, please also visit the {ref}`CrateDB
@@ -40,8 +39,8 @@ all terms related to the CrateDB database in general.
 ## Audit log 
 
 The Audit Log registers and displays all operations associated with a
-particular {ref}`organization <gloss-org>` This includes operations 
-on {ref}`users <gloss-user>`on {ref}`clusters <gloss-cluster>`, and 
+particular {ref}`organization <gloss-org>`. This includes operations 
+on {ref}`users <gloss-user>`, on {ref}`clusters <gloss-cluster>`, and 
 on {ref}`consumers <gloss-consumer>`. The Audit Log can be found 
 in the rightmost tab of the Organization overview page in the CrateDB 
 Cloud {ref}`Console <gloss-console>`. Only an *organization admin* has 
