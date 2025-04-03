@@ -59,10 +59,6 @@ by selecting the "Request new region" button and filling out the form.
 .. image:: ../../_assets/img/deployment-region-request.png
    :alt: CrateDB Cloud Console Deployment New Region Request
 
-If you are deploying an :ref:`Cloud on Kubernetes <cloud-on-kubernetes>`
-cluster, you can choose your custom region by selecting the "Add a custom edge
-region" link.
-
 Compute
 -------
 

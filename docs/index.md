@@ -159,7 +159,6 @@ Networking & Connectivity <reference/networking>
 API <organization/api>
 How Tos <howtos/index>
 Croud CLI <tutorials/deploy/croud>
-tutorials/edge/index
 Reference <reference/index>
 :::
 
