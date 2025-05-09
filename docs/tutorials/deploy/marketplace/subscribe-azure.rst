@@ -12,7 +12,9 @@ Crate.io.
 
 As a SaaS service, the subscription payment is arranged through Azure. The
 cluster will be hosted in the region you select as part of the configuration
-process. To pay directly for a  hosted cluster by credit card, see the tutorial for
+process. If you are looking for a self-hosted CrateDB Cloud service, check out
+the :ref:`CrateDB Cloud on Kubernetes tutorial <cloud-on-kubernetes>`. To pay
+directly for a  hosted cluster by credit card, see the tutorial for
 :ref:`direct cluster deployment <cluster-deployment-stripe>`.
 
 
