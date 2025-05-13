@@ -134,12 +134,6 @@ your favorite client library to connect to a CrateDB cluster.
 ::::
 
 
-:::{note}
-Like [CrateDB itself], this is an open source documentation project. [Suggestions
-for improvements], and [source code contributions], are always welcome. {fab}`github`
-:::
-
-
 :::{toctree}
 :maxdepth: 1
 :hidden:
@@ -166,6 +160,3 @@ Reference <reference/index>
 [Croud CLI]: https://crate.io/docs/cloud/cli/
 [How-To Guides]: https://crate.io/docs/cloud/en/latest/howtos/
 [Reference]: https://crate.io/docs/cloud/en/latest/reference/
-[CrateDB itself]: https://github.com/crate/crate
-[source code contributions]: https://github.com/crate/cloud-docs/tree/main/docs
-[suggestions for improvements]: https://github.com/crate/cloud-docs/issues
