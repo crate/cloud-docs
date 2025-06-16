@@ -10,17 +10,17 @@ Fully managed by CrateDB Cloud, integrations eliminate the need for manual
 setup or maintenance of separate ETL pipelines.
 
 
-```{figure} ../_assets/img/integrations-example.png
+```{figure} ../../_assets/img/integrations-example.png
 :width: 600px
 :align: center
 :alt: Integration in CrateDB Cloud
 ```
 
 :::{toctree}
-:maxdepth: 1
+:titlesonly:
 :hidden:
 
-MongoDB CDC (Preview) <integrations/mongo-cdc>
+MongoDB CDC (Preview) <mongo-cdc>
 :::
 
 ---
