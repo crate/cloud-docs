@@ -104,7 +104,7 @@ A command-line tool to operate your managed clusters.
 ::::
 
 
-Do you want to learn about key database drivers and client applications for 
+Do you want to learn about key database drivers and client applications for
 CrateDB, such as CrateDB Admin UI, crash, psql, DataGrip, and DBeaver? Discover
 how to configure these tools and explore CrateDB's compatibility with analytics,
 ETL, BI, and monitoring solutions.
@@ -135,7 +135,7 @@ your favorite client library to connect to a CrateDB cluster.
 
 
 :::{toctree}
-:maxdepth: 1
+:titlesonly:
 :hidden:
 
 Quick Start <tutorials/quick-start>
@@ -143,7 +143,7 @@ Services <reference/services>
 Import <cluster/import>
 Console <cluster/console>
 Automation <cluster/automation>
-Integrations <cluster/integrations>
+Integrations <cluster/integrations/index>
 Export <cluster/export>
 Backups <cluster/backups>
 Manage Cluster <cluster/manage>
