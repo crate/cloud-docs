@@ -89,7 +89,7 @@ Learn how to manage your cluster.
 :::
 
 :::{card} {octicon}`codespaces` API
-:link: api
+:link: organization-api
 :link-type: ref
 Programmatic access to services.
 :::
