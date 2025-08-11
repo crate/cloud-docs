@@ -91,13 +91,13 @@ Learn how to manage your cluster.
 :::{card} {octicon}`codespaces` API
 :link: api
 :link-type: ref
-Programmatic access to CrateDB Cloud services.
+Programmatic access to services.
 :::
 
 :::{card} {octicon}`terminal` API CLI
 :link: cluster-deployment-croud
 :link-type: ref
-CrateDB Cloud services from the command-line.
+Use services from the command-line.
 :::
 
 ::::
