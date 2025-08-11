@@ -76,53 +76,46 @@ existing subscription, we are maintaining resources and tutorials
 to support you correspondingly.
 
 
-:::::{grid} 2
-:margin: 3
+::::{grid} 1 2 2 3
+:margin: 4 4 0 0
+:padding: 0
 :gutter: 2
 
-::::{grid-item}
-
-:::{card} {octicon}`tools` Manage
+:::{grid-item-card} {octicon}`tools` Manage
 :link: cloud-howtos-index
 :link-type: ref
 Learn how to manage your cluster.
 :::
 
-:::{card} {octicon}`codespaces` API
+:::{grid-item-card} {octicon}`codespaces` API
 :link: organization-api
 :link-type: ref
 Programmatic access to services.
 :::
 
-:::{card} {octicon}`terminal` API CLI
+:::{grid-item-card} {octicon}`terminal` API CLI
 :link: cluster-deployment-croud
 :link-type: ref
 Use services from the command-line.
 :::
 
-::::
-
-::::{grid-item}
-
-:::{card} {octicon}`table` SQL Console
+:::{grid-item-card} {octicon}`table` SQL Console
 :link: cluster-console
 :link-type: ref
 Explore data and execute SQL queries.
 :::
 
-:::{card} {octicon}`file-code` Import
+:::{grid-item-card} {octicon}`file-code` Import
 :link: cluster-import
 :link-type: ref
 Import data into your CrateDB Cloud cluster.
 :::
 
-:::{card} {octicon}`file-code` Export
+:::{grid-item-card} {octicon}`file-code` Export
 :link: cluster-export
 :link-type: ref
 Export data from your CrateDB Cloud cluster.
 :::
-
-::::
 
 :::::
 
