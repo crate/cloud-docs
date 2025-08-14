@@ -65,8 +65,8 @@ Billing <organization/billing>
 Access Management <organization/access-management>
 Networking & Connectivity <reference/networking>
 API <organization/api>
-How Tos <howtos/index>
-Croud CLI <tutorials/deploy/croud>
+API CLI <tutorials/deploy/croud>
+How-tos <howtos/index>
 Reference <reference/index>
 :::
 
@@ -114,17 +114,21 @@ visualization tools.
 
 - Effortless Scaling
 - Zero Downtime Upgrades
-- Flexible Deployment: Full-managed vs. hybrid
+- Flexible deployment: Fully managed vs. hybrid
 - Cost-effectiveness
 +++
-CrateDB Cloud provides confident scaling of your workloads,
+CrateDB Cloud provides reliable scaling of your workloads
 and deployments on your preferred infrastructure provider.
 ::::
 
-::::{grid-item-card} {material-outlined}`security;2em` Confidence
+::::{grid-item-card} {material-outlined}`security;2em` Security & Compliance
 :class-footer: text-smaller
 
-- [Secure, certified, and compliant]
+- [Auditing]
+- [Secure, certified, and compliant]:
+
+  [Encryption], [RBAC],
+  [CCPA], [GDPR], [HIPAA], [ISO 27001], [SOC 2 Type 2]
 - Marketplace Coverage:
 
   [AWS][AWS Marketplace], [Azure][Azure Marketplace], [GCP][GCP Marketplace]
@@ -139,9 +143,8 @@ authentication mechanisms, and its operational certifications.
 
 :::{rubric} Learn
 :::
-If you want to start using CrateDB Cloud, or make the most of your
-existing subscription, we are maintaining resources and tutorials
-to support you correspondingly.
+If you are getting started with CrateDB Cloud—or want to get more from your
+subscription—we provide resources and tutorials to help.
 
 
 ::::{grid} 1 2 2 3
@@ -161,7 +164,7 @@ Learn how to manage your cluster.
 Programmatic access to services.
 :::
 
-:::{grid-item-card} {octicon}`terminal` API CLI
+:::{grid-item-card} {octicon}`terminal` API CLI (croud)
 :link: cluster-deployment-croud
 :link-type: ref
 Use services from the command-line.
@@ -189,7 +192,7 @@ Export data from your CrateDB Cloud cluster.
 
 
 Learn about key database drivers and client applications for CrateDB,
-such as CrateDB Admin UI, crash, psql, DataGrip, and DBeaver.
+such as the Admin UI, crash, psql, DataGrip, and DBeaver.
 Discover how to configure these tools and explore CrateDB's compatibility
 with analytics, ETL, BI, and monitoring solutions.
 
@@ -223,11 +226,6 @@ Learn about all compatible client applications, frameworks, and tools.
 ::::
 
 
-[CrateDB]: https://crate.io/product/
-[Croud CLI]: https://crate.io/docs/cloud/cli/
-[How-To Guides]: https://crate.io/docs/cloud/en/latest/howtos/
-[Reference]: https://crate.io/docs/cloud/en/latest/reference/
-
 [Auditing]: https://cratedb.com/product/features/auditing
 [AWS Marketplace]: https://aws.amazon.com/marketplace/pp/prodview-l7rqf2xpeaubk
 [Azure Marketplace]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=overview
@@ -236,7 +234,7 @@ Learn about all compatible client applications, frameworks, and tools.
 [Encryption]: https://cratedb.com/product/features/data-encryption
 [GCP Marketplace]: https://console.cloud.google.com/marketplace/product/cratedb-public/cratedb-gcp
 [GDPR]: https://gdpr-info.eu/
-[HIPAA]: https://www.cdc.gov/phlp/php/resources/health-insurance-portability-and-accountability-act-of-1996-hipaa.html?CDC_AAref_Val=https://www.cdc.gov/phlp/publications/topic/hipaa.html
+[HIPAA]: https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
 [ISO 27001]: https://cratedb.com/blog/cratedb-elevates-its-security-standards-and-achieves-iso-27001-certification
 [RBAC]: https://cratedb.com/product/features/authorization
 [secure, certified, and compliant]: https://cratedb.com/contact/security
