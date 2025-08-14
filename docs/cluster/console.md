@@ -28,3 +28,9 @@ not within a single session or transaction. If one query fails, the subsequent
 queries will not be executed. Currently, session settings are not persisted 
 between queries.
 :::
+
+:::{note}
+Each CrateDB Cloud cluster offers a dedicated {ref}`Admin UI <crate-admin-ui:index>`,
+which can be used to explore data, schema metadata, and cluster status
+information.
+:::
