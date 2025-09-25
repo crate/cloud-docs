@@ -4,7 +4,7 @@
 
 
 This is a collection of how-to guides for CrateDB Cloud. Learn how to manage
-your cluster and organizations below. For the purposes of these guides, 
+your cluster and organizations below. For the purposes of these guides,
 we assume you interact with CrateDB Cloud by using the CrateDB
 Cloud Console. Alternatively, you can use the command-line interface CrateDB
 Cloud CLI, aka. {ref}`Croud <cloud-cli:index>`.
@@ -69,7 +69,8 @@ Learn how to scale your cluster up or down, depending on your needs.
 :::{grid-item-card} {octicon}`hourglass` Suspend Cluster
 :link: suspend-cluster
 :link-type: ref
-Learn how to temporarily suspend your cluster. You are only charged for storage while in suspended state.
+Learn how to temporarily suspend your cluster. You are only charged for storage
+while in suspended state.
 :::
 
 :::{grid-item-card} {octicon}`trash` Delete Cluster
@@ -87,28 +88,23 @@ Learn how backups are made and how to restore them.
 :::{grid-item-card} {octicon}`clock` Logical Replication
 :link: logical-replication
 :link-type: ref
-Logical replication is a mechanism by which data can automatically be 
+Logical replication is a mechanism by which data can automatically be
 copied across multiple clusters.
 :::
 
 :::{grid-item-card} {octicon}`clock` Private Endpoints
 :link: private-endpoints
 :link-type: ref
-A private endpoint, or private link, is a mechanism that allows a 
+A private endpoint, or private link, is a mechanism that allows a
 secure, private connection to your cluster.
 :::
 
-:::{grid-item-card} {octicon}`link` Clients, Tools, and Integrations
-:link: crate-clients-tools:index
+:::{grid-item-card} {octicon}`link` Clients
+:link: connect
 :link-type: ref
 
-Learn about compatible client applications and tools, and how to configure
-your favorite client library to connect to a CrateDB cluster.
+Learn how to configure your favorite client library to connect to a CrateDB
+cluster.
 :::
 
 ::::
-
-:::{note}
-This is an open source documentation project. We host the source code and
-issue tracker on [GitHub](https://github.com/crate/cloud-docs/) .
-:::

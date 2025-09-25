@@ -52,7 +52,6 @@ flexible pricing models across on-demand and flat-rate options.
 :titlesonly:
 :hidden:
 
-Quick Start <tutorials/quick-start>
 Services <reference/services>
 Import <cluster/import>
 Console <cluster/console>
