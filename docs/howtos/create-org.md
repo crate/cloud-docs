@@ -2,10 +2,9 @@
 # Create Organization
 
 This is a guide on how to create a new organization in the CrateDB Cloud
-Console. If you follow the [cluster deployment
-tutorial](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html),
-your first organization will be automatically created for you. However,
-there are scenarios where you may want to create a new organization.
+Console. When you first signup in [CrateDB Cloud], your first organization will
+be automatically created for you. However, there are scenarios where you may
+want to create a new organization.
 
 If you arrive at the Console for the first time, or if you have deleted
 your last organization, you will have to create an organization to use
@@ -16,7 +15,7 @@ of one, the process is slightly different. This guide will outline both
 methods.
 
 (create-org-new)=
-## Create first organization 
+## Create first organization
 
 When you first access the CrateDB Cloud Console after signing up, you
 will arrive at the Cluster overview page. You will also be informed,
@@ -26,7 +25,7 @@ for you.
 ![Cloud Console org overview without organization](../_assets/img/new-account-arrival.png)
 
 (create-org-multiple)=
-## Create multiple organizations 
+## Create multiple organizations
 
 If you are already in an organization and want to create another one, go
 to the Account tab. Here you will see a list of all your organizations
@@ -51,3 +50,5 @@ To switch the active organization, click on the organization name in the
 list. All organization and cluster management options displayed in the
 CrateDB Cloud Console will then refer to that organization until you
 switch organizations again.
+
+[CrateDB Cloud]: https://console.cratedb.cloud/

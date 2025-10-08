@@ -6,19 +6,13 @@ Subscribe to CrateDB Cloud via the AWS Marketplace
 
 One way to deploy a cluster on CrateDB Cloud is to sign up via AWS
 Marketplace. You will need an AWS Marketplace account to proceed, which for the
-purposes of this tutorial we will assume you have. (If not, you can sign up on the `Marketplace page`_.) By using CrateDB Cloud's service on AWS
+purposes of this tutorial we will assume you have. (If not, you can sign up on
+the `Marketplace page`_.) By using CrateDB Cloud's service on AWS
 Marketplace, your hourly usage is billed directly by Amazon, not by Crate.io.
 
 As a SaaS service, the subscription payment is arranged through AWS. The
 cluster will be hosted in the region you select as part of the configuration
-process. To pay directly for a  hosted cluster by credit card, see the tutorial for
-:ref:`direct cluster deployment <cluster-deployment-stripe>`.
-
-.. rubric:: Table of contents
-
-.. contents::
-   :local:
-
+process.
 
 .. _signup-aws-to-cluster-offer:
 
@@ -53,10 +47,9 @@ configuration on the CrateDB Cloud end.
 .. image:: ../../../_assets/img/aws-subscribe-confirm.png
    :alt: CrateDB Cloud on AWS subscription confirmation
 
-After clicking the *Set Up Your Account*, you will be redirected to the CrateDB
-Cloud console. From here, you can follow the :ref:`usual deployment procedure
-<cluster-deployment-stripe>` use your new AWS subscription for the billing in
-the CrateDB Cloud console.
+After clicking the *Set Up Your Account*, you will be redirected to the `CrateDB
+Cloud Console`_. From here, you can follow the usual deployment procedure and use
+your new AWS subscription for the billing.
 
 .. NOTE::
 
@@ -87,3 +80,4 @@ large volumes, please contact `Sales`_ first to negotiate a private offer.
 .. _Marketplace page: https://portal.aws.amazon.com/billing/signup
 .. _Sales: sales@crate.io
 .. _the AWS offer: https://aws.amazon.com/marketplace/pp/B089M4B1ND
+.. _CrateDB Cloud Console: https://console.cratedb.cloud/
