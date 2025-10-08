@@ -72,9 +72,9 @@ and queries per second. Only actual cluster usage is billed.
 
 A cluster has a name, a unique ID, as well as a storage and processing
 capacity and a number of nodes. Note that clusters are also versioned.
-For information on how to deploy a cluster, please see the [tutorial for
-deploying a CrateDB Cloud cluster from
-scratch](https://cratedb.com/docs/cloud/en/latest/tutorials/quick-start.html).
+
+For information on how to deploy a cluster, please see the
+{ref}`tutorial for deploying a CrateDB Cloud cluster from scratch <cluster-deployment-croud>`.
 
 (gloss-console)=
 ## Console
