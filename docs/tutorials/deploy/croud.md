@@ -3,8 +3,8 @@
 
 This tutorial will outline a step-by-step guide to deploying a cluster
 using the Cloud CLI application from scratch. The walkthrough assumes
-you have completed the {ref}`signup process <quick-start>` successfully, 
-and that the `croud` program {ref}`is installed <cloud-cli:getting-started>`
+you have completed the [signup process](https://console.cratedb.cloud)
+successfully, and that the `croud` program {ref}`is installed <cloud-cli:getting-started>`
 on your system.
 
 ::::{grid} 1 1 1 1
@@ -240,8 +240,8 @@ Required arguments:
 
     * `--unit 0` means **1 node**
     * `--unit 1` means **2 nodes**
-    * `--unit 2` means **3 nodes** etc.   
-  
+    * `--unit 2` means **3 nodes** etc.
+
   This allows you to scale the performance of your cluster up or
   down.
 

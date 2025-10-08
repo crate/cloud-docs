@@ -5,22 +5,14 @@ Subscribe to CrateDB Cloud via the Azure Marketplace
 ====================================================
 
 Another way to deploy a CrateDB cluster on CrateDB Cloud is via the Microsoft
-Azure Marketplace. You will need a Microsoft Azure account and an Azure 
+Azure Marketplace. You will need a Microsoft Azure account and an Azure
 subscription with a credit card linked to it. By using CrateDB Cloud's service
 on Azure Marketplace, your hourly usage is billed directly by Microsoft, not by
 Crate.io.
 
 As a SaaS service, the subscription payment is arranged through Azure. The
 cluster will be hosted in the region you select as part of the configuration
-process. To pay directly for a  hosted cluster by credit card, see the tutorial for
-:ref:`direct cluster deployment <cluster-deployment-stripe>`.
-
-
-.. rubric:: Table of contents
-
-.. contents::
-   :local:
-
+process.
 
 .. _signup-azure-to-cluster-offer:
 
@@ -29,7 +21,7 @@ Using the CrateDB Cloud offer on Azure Marketplace
 
 To subscribe to CrateDB Cloud's offering on Azure Marketplace, find the CrateDB
 Cloud offer page. You can either search "CrateDB Cloud" in the search bar at
-the top of the Azure Marketplace front page or go directly to 
+the top of the Azure Marketplace front page or go directly to
 `Azure marketplace`_.  The top of the offer page should look as follows:
 
 .. image:: ../../../_assets/img/azure-portal-offer.png
@@ -66,11 +58,11 @@ After confirming, a screen similar to this should appear in a few moments:
    :alt: Azure Portal CrateDB Cloud created subscription
 
 This means the process is done and the subscription was successfully created.
-From here, you can follow the :ref:`usual deployment procedure
-<cluster-deployment-stripe>` and use your new Azure subscription for the
-billing in the CrateDB Cloud console.
+From here, you can follow the usual deployment procedure in `CrateDB Cloud
+Console`_ and use your new Azure subscription for the billing.
 
 
 .. _Azure documentation on resource groups: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal
 .. _Azure documentation on tags: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources
 .. _Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
+.. _CrateDB Cloud Console: https://console.cratedb.cloud/

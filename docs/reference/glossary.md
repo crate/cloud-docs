@@ -7,7 +7,7 @@ to CrateDB Cloud. The items are presented in alphabetical order.
 
 :::{note}
 While learning about CrateDB Cloud, please also visit the {ref}`CrateDB
-glossary <crate-reference:appendix-glossary>`. It describes 
+glossary <crate-reference:appendix-glossary>`. It describes
 all terms related to the CrateDB database in general.
 :::
 
@@ -36,18 +36,18 @@ all terms related to the CrateDB database in general.
 -   [Versions](#gloss-version)
 
 (gloss-audit-log)=
-## Audit log 
+## Audit log
 
 The Audit Log registers and displays all operations associated with a
-particular {ref}`organization <gloss-org>`. This includes operations 
-on {ref}`users <gloss-user>`, on {ref}`clusters <gloss-cluster>`, and 
-on {ref}`consumers <gloss-consumer>`. The Audit Log can be found 
-in the rightmost tab of the Organization overview page in the CrateDB 
-Cloud {ref}`Console <gloss-console>`. Only an *organization admin* has 
+particular {ref}`organization <gloss-org>`. This includes operations
+on {ref}`users <gloss-user>`, on {ref}`clusters <gloss-cluster>`, and
+on {ref}`consumers <gloss-consumer>`. The Audit Log can be found
+in the rightmost tab of the Organization overview page in the CrateDB
+Cloud {ref}`Console <gloss-console>`. Only an *organization admin* has
 access to the Audit Log.
 
 (gloss-azure-ad)=
-## Azure AD 
+## Azure AD
 
 Azure AD (Active Directory) is Microsoft's authentication and sign-in
 service for accessing Microsoft hosted services. CrateDB Cloud uses
@@ -57,27 +57,25 @@ documentation on
 Azure](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis).
 
 (gloss-cluster)=
-## Cluster 
+## Cluster
 
-Within each {ref}`organization <gloss-org>`, an administrator can 
+Within each {ref}`organization <gloss-org>`, an administrator can
 deploy any number of {ref}`products <gloss-product>`. The main
 service is the deployment of clusters, which can be done through the
 CrateDB Cloud Console. A cluster is a set of at least one instance
 (referred to as node) which forms a database. It is also possible (and
 recommended) to deploy multi-node clusters. Then the the database is
 truly distributed. Depending on the user's {ref}`subscription
-plan <gloss-subscription-plan>` and scaling, each cluster will have a 
-certain storage capacity and can process a certain amount of ingests 
+plan <gloss-subscription-plan>` and scaling, each cluster will have a
+certain storage capacity and can process a certain amount of ingests
 and queries per second. Only actual cluster usage is billed.
 
 A cluster has a name, a unique ID, as well as a storage and processing
 capacity and a number of nodes. Note that clusters are also versioned.
-For information on how to deploy a cluster, please see the [tutorial for
-deploying a CrateDB Cloud cluster from
-scratch](https://cratedb.com/docs/cloud/en/latest/tutorials/quick-start.html).
+You can deploy a free cluster in [CrateDB Cloud](https://console.cratedb.cloud).
 
 (gloss-console)=
-## Console 
+## Console
 
 The CrateDB Cloud Console is the hosted user interface for CrateDB
 Cloud. It is a fully supported, easy-to-use UI which allows customers to
@@ -88,7 +86,7 @@ use of the Console by default. Only the Console allows deployment of a
 {ref}`cluster <gloss-cluster>`.
 
 (gloss-consumer)=
-## Consumer 
+## Consumer
 
 A consumer in the sense used for CrateDB Cloud architecture and
 documentation is an entity that reads event data from an IoT hub. It is
@@ -101,16 +99,16 @@ Operations on consumers are registered in the
 
 
 (gloss-croud)=
-## Croud 
+## Croud
 
 Croud is the name of the CrateDB Cloud Command-Line Interface (CLI). You
-can use Croud to interact with the {ref}`organization <gloss-org>` and 
+can use Croud to interact with the {ref}`organization <gloss-org>` and
 {ref}`products <gloss-product>` you have access to.
 
 Croud is intended for customers who prefer a CLI to the use of a hosted
 web interface such as the CrateDB Cloud
-{ref}`Console <gloss-console>`. Note however that the Console 
-is the default way to interact with CrateDB Cloud, and currently 
+{ref}`Console <gloss-console>`. Note however that the Console
+is the default way to interact with CrateDB Cloud, and currently
 clusters can only be deployed within the Console.
 
 :::{note}
@@ -118,29 +116,29 @@ See also: Croud CLI {ref}`documentation <cluster-deployment-croud>`.
 :::
 
 (gloss-cloud-on-kubernetes)=
-## CrateDB Cloud on Kubernetes 
+## CrateDB Cloud on Kubernetes
 
 CrateDB Cloud on Kubernetes is a hybrid cloud database solution presented
 by [CrateDB](https://cratedb.com/). It allows customers to deploy a Kubernetes cluster either on
-their own cloud provider or their own local servers, using the database 
-software and maintenance support that CrateDB Cloud offers. It can be 
+their own cloud provider or their own local servers, using the database
+software and maintenance support that CrateDB Cloud offers. It can be
 accessed through the {ref}`CrateDB Cloud Console <gloss-console>`.
 
 (gloss-endpoint)=
-## Endpoint 
+## Endpoint
 
 An endpoint is the end or goal of a communication channel. A user or
 client communicates with an endpoint via a defined method, which returns
 a defined set of data. In CrateDB Cloud, different
-{ref}`profiles <gloss-profile>` can be used to configure their own 
-associated endpoints, which a user connects to via the 
-{ref}`Croud <gloss-croud>` CLI. For information on how 
+{ref}`profiles <gloss-profile>` can be used to configure their own
+associated endpoints, which a user connects to via the
+{ref}`Croud <gloss-croud>` CLI. For information on how
 to do this, see the {ref}`Croud configuration <cluster-deployment-croud>`.
 
 (gloss-offer)=
-## Offer 
+## Offer
 
-An offer or subscription offer is a Software-as-a-Service 
+An offer or subscription offer is a Software-as-a-Service
 {ref}`(SaaS) <gloss-saas>` product prepared for
 consumer purchase on a subscription basis. CrateDB Cloud has an offer on
 the [Microsoft Azure
@@ -149,11 +147,11 @@ and on the [AWS
 Marketplace](https://aws.amazon.com/marketplace/pp/B089M4B1ND).
 
 (gloss-org)=
-## Organization 
+## Organization
 
 Organizations represent the larger structure - for example a company -
-within which CrateDB Cloud {ref}`products <gloss-product>` are deployed. 
-At the organization level there is always at least one organization 
+within which CrateDB Cloud {ref}`products <gloss-product>` are deployed.
+At the organization level there is always at least one organization
 administrator, who can in turn add organization
 members. Such organization admins and members have access to the
 clusters run by the organization. One account can be a member or admin
@@ -169,27 +167,27 @@ email address. For information on how to create an organization, please
 refer to the guide about {ref}`creating organization <create-org>`.
 
 (gloss-product)=
-## Product 
+## Product
 
 A product in the sense used in CrateDB Cloud is something that uses the
-Cloud service for the storage of data. It consists of either a 
-{ref}`consumer <gloss-consumer>` or a {ref}`cluster <gloss-cluster>` and 
+Cloud service for the storage of data. It consists of either a
+{ref}`consumer <gloss-consumer>` or a {ref}`cluster <gloss-cluster>` and
 is run within an {ref}`organization <gloss-org>`.
 
 (gloss-profile)=
-## Profile 
+## Profile
 
-In CrateDB Cloud's CLI, {ref}`Croud <gloss-croud>`, profiles are sets 
-of configuration options. They define API {ref}`endpoints <gloss-endpoint>` 
+In CrateDB Cloud's CLI, {ref}`Croud <gloss-croud>`, profiles are sets
+of configuration options. They define API {ref}`endpoints <gloss-endpoint>`
 and the desired output format of interaction with those endpoints. A Croud user
 can create multiple profiles and switch between them as desired.
 
 (gloss-region)=
-## Region 
+## Region
 
 A region in the sense used for CrateDB Cloud is a set of data centers
 (servers) grouped together on a geographic basis so as to not exceed a
-certain latency. CrateDB Cloud on Kubernetes also permits the creation of 
+certain latency. CrateDB Cloud on Kubernetes also permits the creation of
 custom regions. These regions are designed to correspond to servers used
 by CrateDB Cloud on Kubernetes customers locally, on which they can deploy
 CrateDB Cloud clusters for use in plants and other production facilities.
@@ -210,9 +208,9 @@ and the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B089M4B1ND).
 ## Scale unit
 
 The CrateDB Cloud
-{ref}`subscription plans <gloss-subscription-plan>` each come with a number 
-of different scale units. Each scale unit represents an (additional) 
-unit multiplying the specific combination of hardware capacity 
+{ref}`subscription plans <gloss-subscription-plan>` each come with a number
+of different scale units. Each scale unit represents an (additional)
+unit multiplying the specific combination of hardware capacity
 that applies to that plan.
 
 :::{note}
@@ -225,8 +223,7 @@ cluster guide](https://crate.io/docs/cloud/howtos/en/latest/reconfigure-cluster.
 
 A subscription is - for the purposes of CrateDB Cloud - a container in
 which the CrateDB Cloud service is created and managed. You can purchase
-a CrateDB Cloud subscription by following the steps in the
-[tutorial](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html).
+a CrateDB Cloud subscription by signing up at [CrateDB Cloud].
 In the case of using a {ref}`SaaS <gloss-saas>` {ref}`offers <gloss-offer>` on the cloud
 provider marketplaces, customers subscribe to CrateDB Cloud through that
 particular cloud provider.
@@ -238,8 +235,7 @@ wants to separate different instances of using the CrateDB Cloud service
 into different billing accounts.
 
 :::{note}
-[Subscribe to CrateDB
-Cloud](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html)
+[Subscribe to CrateDB Cloud](https://console.cratedb.cloud)
 
 [Subscribe via AWS
 Marketplace](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-aws/subscribe-aws.html)
@@ -247,7 +243,7 @@ Marketplace](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/
 [Subscribe via Azure
 Marketplace](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-azure/subscribe-azure.html)
 
-{ref}`Services <services>`  
+{ref}`Services <services>`
 :::
 
 (gloss-subscription-plan)=
@@ -259,16 +255,15 @@ towards particular customer use cases: from trial and development plans
 to high-end production clusters. They can also be further adjusted for
 different {ref}`scale units <gloss-scale-unit>` per plan.
 
-Currently, there are multiple subscription plans available for {ref}`direct
-deployment <deploy-cluster>`, and also multiple plans and a separate contract option 
-through the Marketplace {ref}`offers <gloss-offer>`. For more information, 
-refer to the documentation on {ref}` services we offer <services>`.
+There are multiple subscription plans available for direct
+deployment, and also multiple plans and a separate contract option
+through the Marketplace {ref}`offers <gloss-offer>`. For more information,
+refer to the documentation on {ref}`services we offer <services>`.
 
 :::{note}
 See also:
 
-[Subscribe to CrateDB
-Cloud](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html)
+[Subscribe to CrateDB Cloud](https://console.cratedb.cloud)
 
 [Subscribe via AWS
 Marketplace](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-aws/subscribe-aws.html)
@@ -276,7 +271,6 @@ Marketplace](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/
 [Subscribe via Azure
 Marketplace](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-azure/subscribe-azure.html)
 
-{ref}`Deployment <cluster-deployment>`
 :::
 
 (gloss-system-user)=
@@ -298,10 +292,10 @@ In CrateDB Cloud, there are two distinct system
 ## Tier
 
 In the CrateDB Cloud
-{ref}`services <services>` for SaaS Marketplace 
-subscriptions, tiers offer different magnitudes of the hardware 
-composition of a given plan. For a given ratio of storage capacity, 
-memory, and CPUs, going up in tier allows youto multiply 
+{ref}`services <services>` for SaaS Marketplace
+subscriptions, tiers offer different magnitudes of the hardware
+composition of a given plan. For a given ratio of storage capacity,
+memory, and CPUs, going up in tier allows youto multiply
 the hardware values for your cluster deployment without
 changing the hardware ratio.
 
@@ -309,7 +303,7 @@ changing the hardware ratio.
 ## User
 
 A user in CrateDB Cloud is any individual account authorized to interact
-with some part of an {ref}`organization's <gloss-org>` assets. Each user has 
+with some part of an {ref}`organization's <gloss-org>` assets. Each user has
 a defined role within the organization (see documentation on {ref}`user roles
 <user-roles>`) and is associated with a
 specific email address.
@@ -341,7 +335,7 @@ the versioning sequence, e.g. the 3 in 'version 5.3.4'.
 A patch version of CrateDB is a release that includes bug fixes and
 smaller quality of life improvements compared to the previous such
 version. It is indicated by the third numeral in the versioning
-sequence, e.g. the 4 in 'version 5.3.4'. 
+sequence, e.g. the 4 in 'version 5.3.4'.
 
 :::{note}
 See also: {ref}`CrateDB Release Notes <crate-reference:release_notes>`

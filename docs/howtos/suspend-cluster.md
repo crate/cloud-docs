@@ -4,8 +4,7 @@
 This guide will provide a quick overview of how to suspend your cluster
 using the CrateDB Cloud Console. For the purposes of this guide, it is
 assumed that you have a cluster up and running and can access the
-Console. If not, please refer to the tutorial on how 
-to {ref}`deploy a cluster for the first time. <deploy-cluster>`
+Console.
 
 (what-is-suspension)=
 ## What is cluster suspension
@@ -18,7 +17,7 @@ The benefit here is that while the cluster is suspended, you are only
 charged for the storage.
 
 (cluster-suspend-steps)=
-## Steps to suspending the cluster 
+## Steps to suspending the cluster
 
 To suspend your cluster, navigate to the Clusters page in the left-hand
 menu. Here you can see a list of all your clusters. Click *View* on the
@@ -34,7 +33,7 @@ Once here, you can suspend your cluster. Simply click the *Suspend
 cluster* in the top-right.
 
 (how-to-resume-a-cluster)=
-## Resume a cluster 
+## Resume a cluster
 
 To resume your cluster, simply click the *Resume cluster* button in the
 top-right while in the Overview page of your cluster.
@@ -42,7 +41,7 @@ top-right while in the Overview page of your cluster.
 ![Cloud Console resume cluster](../_assets/img/cluster-resume.png)
 
 (additional-info)=
-## Important things to know 
+## Important things to know
 
 -   To suspend a cluster, you must be an organization Admin.
 -   You can suspend and resume clusters at any time.
