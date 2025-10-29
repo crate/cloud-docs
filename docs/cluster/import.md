@@ -2,11 +2,13 @@
 # Import 
 
 The first thing you see in the "Import" tab is the history of your
-imports. You can see whether you imported from a URL or from a file,
-file name, table into which you imported, date, and status. By clicking
-"Show details" you can display details of a particular import.
+import jobs. You can see whether you imported from a URL or from a file,
+the source file name and the target table name, and other metadata
+like date and status.
+By navigating to "Show details", you can display details of a particular
+import job.
 
-Clicking the "Import new data" button will bring up the Import page,
+Clicking the "Import new data" button will bring up the page
 where you can select the source of your data.
 
 If you don't have a dataset prepared, we also provide an example in the
@@ -14,7 +16,7 @@ URL import section. It's the New York City taxi trip dataset for July
 of 2019 (about 6.3M records).
 
 (cluster-import-url)=
-## Import from URL 
+## URL
 
 To import data, fill out the URL, name of the table which will be
 created and populated with your data, data format, and whether it is
@@ -34,7 +36,7 @@ Gzip compressed files are also supported.
 ![Cloud Console cluster upload from URL](../_assets/img/cluster-import-tab-url.png)
 
 (cluster-import-s3)=
-## Import from private S3 bucket 
+## S3 bucket
 
 CrateDB Cloud allows convenient imports directly from S3-compatible
 storage. To import a file form bucket, provide the name of your bucket,
@@ -48,29 +50,30 @@ imports. The usual file formats are supported - CSV (all variants), JSON
 ![Cloud Console cluster upload from S3](../_assets/img/cluster-import-tab-s3.png)
 
 :::{note}
-It's important to make sure that you have the right permissions to
+It is important to make sure that you have the right permissions to
 access objects in the specified bucket. For AWS S3, your user should
 have a policy that allows GetObject access, for example:
 
- :::{code}
- {
-   "Version": "2012-10-17",
-   "Statement": [
-   {
-       "Sid": "AllowGetObject",
-       "Effect": "Allow",
-       "Principal": {
-           "AWS": "*"
-       },
-       "Action": "s3:GetObject",
-       "Resource": "arn:aws:s3:::EXAMPLE-BUCKET-NAME/*"
-   }]
-   }
- :::
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowGetObject",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::EXAMPLE-BUCKET-NAME/*"
+    }
+  ]
+}
+```
 :::
 
 (cluster-import-azure)=
-## Import from Azure Blob Storage Container 
+## Azure Blob Storage
 
 Importing data from private Azure Blob Storage containers is possible
 using a stored secret, which includes a secret name and either an Azure
@@ -78,7 +81,7 @@ Storage Connection string or an Azure SAS Token URL. An admin user at
 the organization level can add this secret.
 
 You can specify a secret, a container, a table and a path in the form
-[/folder/my_file.parquet]
+`/folder/my_file.parquet`.
 
 As with other imports Parquet, CSV, and JSON files are supported. File
 size limitation for imports is 10 GiB per file.
@@ -86,7 +89,7 @@ size limitation for imports is 10 GiB per file.
 ![Cloud Console cluster upload from Azure Storage Container](../_assets/img/cluster-import-tab-azure.png)
 
 (cluster-import-globbing)=
-## Importing multiple files 
+## Globbing
 
 Importing multiple files, also known as import globbing is supported in
 any s3-compatible blob storage. The steps are the same as if importing
@@ -112,7 +115,7 @@ As with other imports, the supported file types are CSV, JSON, and
 Parquet.
 
 (cluster-import-file)=
-## Import from file 
+## File
 
 Uploading directly from your computer offers more control over your
 data. From the security point of view, you don't have to share the data
