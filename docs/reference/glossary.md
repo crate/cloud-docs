@@ -72,7 +72,9 @@ and queries per second. Only actual cluster usage is billed.
 
 A cluster has a name, a unique ID, as well as a storage and processing
 capacity and a number of nodes. Note that clusters are also versioned.
-You can deploy a free cluster in [CrateDB Cloud](https://console.cratedb.cloud).
+For information on how to deploy a cluster, please see the [tutorial for
+deploying a CrateDB Cloud cluster from
+scratch](https://cratedb.com/docs/cloud/en/latest/tutorials/quick-start.html).
 
 (gloss-console)=
 ## Console
