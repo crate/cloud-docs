@@ -112,7 +112,7 @@ Schema Evolution, available for all import types, enables automatic
 addition of new columns to existing tables during data import,
 eliminating the need to pre-define table schemas. This feature is
 applicable to both pre-existing tables and those created during the
-import process. It can be toggled via the 'Allow schema  evolution' checkbox
+import process. It can be toggled via the 'Allow schema evolution' checkbox
 on the import page.
 
 Note that Schema Evolution is limited to adding new columns; it does not
