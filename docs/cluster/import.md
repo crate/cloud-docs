@@ -1,29 +1,40 @@
 (cluster-import)=
 # Import 
 
-The first thing you see in the "Import" tab is the history of your
-import jobs. You can see whether you imported from a URL or from a file,
-the source file name and the target table name, and other metadata
-like date and status.
-By navigating to "Show details", you can display details of a particular
-import job.
+You can import data into your CrateDB directly from sources like:
+- local file
+- URL
+- AWS S3 bucket
+- Azure storage
+- MongoDB
 
-Clicking the "Import new data" button will bring up the page
-where you can select the source of your data.
+The data you will import can be in one of those format:
+- CSV
+- JSON (JSON-Lines, JSON Arrays and JSON Documents)
+- Paquet
+- MongoDB collection
 
-If you don't have a dataset prepared, we also provide an example in the
-URL import section. It's the New York City taxi trip dataset for July
-of 2019 (about 6.3M records).
+:::{note}
+If you don't have a dataset prepared, we also provide sample data to let 
+you discover CrateDB. After importing those examples, feel free to go to 
+the tutorial page to learn how to use them.
+:::
 
-(cluster-import-url)=
-## URL
+You can access the history of previous imports by clicking on 
+"Import history" tab.
+By navigating to "View detail", you can display details of a particular
+import job (e.g. The number of successful and failed records per file).
 
-To import data, fill out the URL, name of the table which will be
-created and populated with your data, data format, and whether it is
-compressed.
+![Cloud Console cluster import data](../_assets/img/cluster-import.png)
 
-If a table with the chosen name doesn't exist, it will be automatically
-created.
+(cluster-import-file-import)=
+## File Import
+
+To import data, select the file format, the source and the name of the table 
+which will be created and populated with your data.
+
+You can deactivate the "Allow schema evolution" checkbox if you don't want 
+the destination table to be automatically created or its schema to be modified.
 
 The following data formats are supported:
 
@@ -33,10 +44,10 @@ The following data formats are supported:
 
 Gzip compressed files are also supported.
 
-![Cloud Console cluster upload from URL](../_assets/img/cluster-import-tab-url.png)
+![Cloud Console cluster upload from URL](../_assets/img/cluster-import-file-form.png)
 
-(cluster-import-s3)=
-## S3 bucket
+(cluster-import-file-import-s3)=
+### AWS S3 bucket
 
 CrateDB Cloud allows convenient imports directly from S3-compatible
 storage. To import a file form bucket, provide the name of your bucket,
@@ -44,10 +55,10 @@ and path to the file. The S3 Access Key ID, and S3 Secret Access Key are
 also needed. You can also specify the endpoint for non-AWS S3 buckets.
 Keep in mind that you may be charged for egress traffic, depending on
 your provider. There is also a volume limit of 10 GiB per file for S3
-imports. The usual file formats are supported - CSV (all variants), JSON
-(JSON-Lines, JSON Arrays and JSON Documents), and Parquet.
+imports.
 
-![Cloud Console cluster upload from S3](../_assets/img/cluster-import-tab-s3.png)
+Importing multiple files is also supported by using wildcard 
+notation: `/folder/*.parquet`.
 
 :::{note}
 It is important to make sure that you have the right permissions to
@@ -72,8 +83,8 @@ have a policy that allows GetObject access, for example:
 ```
 :::
 
-(cluster-import-azure)=
-## Azure Blob Storage
+(cluster-import-file-import-azure)=
+### Azure Blob Storage
 
 Importing data from private Azure Blob Storage containers is possible
 using a stored secret, which includes a secret name and either an Azure
@@ -83,60 +94,16 @@ the organization level can add this secret.
 You can specify a secret, a container, a table and a path in the form
 `/folder/my_file.parquet`.
 
-As with other imports Parquet, CSV, and JSON files are supported. File
-size limitation for imports is 10 GiB per file.
+Importing multiple files is also supported by using wildcard 
+notation: `/folder/*.parquet`.
 
-![Cloud Console cluster upload from Azure Storage Container](../_assets/img/cluster-import-tab-azure.png)
+File size limitation for imports is 10 GiB per file.
 
-(cluster-import-globbing)=
-## Globbing
+(cluster-import-integration)=
+## Integration
 
-Importing multiple files, also known as import globbing is supported in
-any s3-compatible blob storage. The steps are the same as if importing
-from S3, i.e. bucket name, path to the file and S3 ID/Secret.
+{ref}`More info about data integration. <cluster-integrations>`
 
-Importing multiple files from Azure Container/Blob Storage is also
-supported: `/folder/*.parquet`
-
-Files to be imported are specified by using the well-known
-[wildcard](https://en.wikipedia.org/wiki/Wildcard_character) notation,
-also known as "globbing". In computer programming,
-[glob](https://en.wikipedia.org/wiki/Glob_(programming)) patterns
-specify sets of filenames with wildcard characters. The following
-example would import all the files from the single specified day.
-
-:::{code} console
-/somepath/AWSLogs/123456678899/CloudTrail/us-east-1/2023/11/12/*.json.gz
-:::
-
-![Cloud Console cluster import globbing](../_assets/img/cluster-import-globbing.png)
-
-As with other imports, the supported file types are CSV, JSON, and
-Parquet.
-
-(cluster-import-file)=
-## File
-
-Uploading directly from your computer offers more control over your
-data. From the security point of view, you don't have to share the data
-on the internet just to be able to import it to your cluster. You also
-have more control over who has access to your data. Your files are
-temporarily uploaded to a secure location managed by Crate (an S3 bucket
-in AWS) which is not publicly accessible. The files are automatically
-deleted after 3 days. You may re-import the same file into multiple
-tables without having to re-upload it within those 3 days. Up to 5 files
-may be uploaded at the same time, with the oldest ones being
-automatically deleted if you upload more.
-
-![Cloud Console cluster upload from file](../_assets/img/cluster-import-tab-file.png)
-
-As with other import, the supported file formats are:
-
--   CSV (all variants)
--   JSON (JSON-Lines, JSON Arrays and JSON Documents)
--   Parquet
-
-There is also a limit to file size, currently 1GB.
 
 (overview-cluster-import-schema-evolution)=
 ## Schema evolution 
@@ -145,7 +112,7 @@ Schema Evolution, available for all import types, enables automatic
 addition of new columns to existing tables during data import,
 eliminating the need to pre-define table schemas. This feature is
 applicable to both pre-existing tables and those created during the
-import process. It can be toggled via the 'Schema Evolution' checkbox
+import process. It can be toggled via the 'Allow schema  evolution' checkbox
 on the import page.
 
 Note that Schema Evolution is limited to adding new columns; it does not
