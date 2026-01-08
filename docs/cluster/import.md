@@ -11,7 +11,7 @@ You can import data into your CrateDB directly from sources like:
 The data you will import can be in one of those format:
 - CSV
 - JSON (JSON-Lines, JSON Arrays and JSON Documents)
-- Paquet
+- Parquet
 - MongoDB collection
 
 :::{note}
@@ -50,7 +50,7 @@ Gzip compressed files are also supported.
 ### AWS S3 bucket
 
 CrateDB Cloud allows convenient imports directly from S3-compatible
-storage. To import a file form bucket, provide the name of your bucket,
+storage. To import a file from a bucket, provide the name of your bucket,
 and path to the file. The S3 Access Key ID, and S3 Secret Access Key are
 also needed. You can also specify the endpoint for non-AWS S3 buckets.
 Keep in mind that you may be charged for egress traffic, depending on
