@@ -1,16 +1,16 @@
 (cluster-import)=
 # Import 
 
-You can import data into your CrateDB directly from sources like:
-- local file
-- URL
-- AWS S3 bucket
+You can import data into your CrateDB directly from various sources, including:
+- Local files
+- URLs
+- AWS S3 buckets
 - Azure storage
-- MongoDB
+- MongoDB database
 
-The data you will import can be in one of those format:
+Currently the following data formats are supported:
 - CSV
-- JSON (JSON-Lines, JSON Arrays and JSON Documents)
+- JSON (JSON-Lines, JSON Arrays, and JSON Documents)
 - Parquet
 - MongoDB collection
 
@@ -20,7 +20,7 @@ you discover CrateDB. After importing those examples, feel free to go to
 the tutorial page to learn how to use them.
 :::
 
-You can access the history of previous imports by clicking on 
+You can access the history of previous imports in the 
 "Import history" tab.
 By navigating to "View detail", you can display details of a particular
 import job (e.g. The number of successful and failed records per file).
