@@ -14,6 +14,8 @@ linkcheck_ignore = [
     "https://azuremarketplace.microsoft.com/",
     "https://azure.microsoft.com/",
     "https://hub.docker.com/",
+    # unauthorized
+    "https://portal.aws.amazon.com/",
 ]
 
 linkcheck_timeout = 5
