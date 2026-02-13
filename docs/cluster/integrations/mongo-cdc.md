@@ -126,7 +126,7 @@ CrateDB Cloud IP addresses to the IP Access List in MongoDB Atlas.
 2. **Add IP Address**
    Click **Add IP Address** and choose an IP address or range to allow access.
    For testing purposes, you can select **Allow Access from Anywhere**, but for
-   production, it is recommended to specify only the required IPs. When you create a new Mongo CDC integration in CrateDB Cloud, the form will show you the specific IP addresses you need to allow for it to work.
+   production, it is recommended to specify only the required IPs. The form will show you the specific IP addresses you need to allow.
 
 :::{note}
 To set up a PrivateLink connection for the Mongo CDC integration, please reach
