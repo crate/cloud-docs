@@ -179,7 +179,7 @@ Follow these steps in the CrateDB Cloud Console to set up the MongoDB CDC integr
 #### Configure Connection
 1. Choose **Create New Connection** or select an existing one.
 2. Fill in the following details:
-   :::{tab} SCRAM Auhentication
+   :::{tab} SCRAM Authentication
    - **Connection Name**: Provide a unique name for the connection.
    - **Connection String**: Paste the connection string from MongoDB Atlas.
    - **Username**: Enter the database username (required for SCRAM).
