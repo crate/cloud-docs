@@ -230,9 +230,9 @@ your MongoDB data based on the selected settings.
 
 ### Column Name Restrictions
 
-Column or property names containing square brackets (`[]`) are not supported and
+Column or property names containing square brackets `[]` are not supported and
 are replaced with `_obkt_` and `_cbkt_` respectively. Likewise, column
-names containing dots (`.`) are not supported and are replaced with `_dot_`.
+names containing dots `.` are not supported and are replaced with `_dot_`.
 
 :::{warning}
 This behavior may change in future releases.
