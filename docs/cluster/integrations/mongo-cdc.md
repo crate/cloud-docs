@@ -226,8 +226,6 @@ your MongoDB data based on the selected settings.
 :::::
 ---
 
-## Limitations
-
 ### Column Name Restrictions
 
 Column or property names containing square brackets `[]` are not supported and
