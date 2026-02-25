@@ -1,13 +1,8 @@
 (integrations-mongo-cdc)=
-# MongoDB CDC (Preview)
+# MongoDB CDC
 
 CrateDB Cloud enables continuous data ingestion from MongoDB using Change Data
-Capture (CDC), providing seamless, real-time synchronization of your data.
-
-:::{caution}
-This integration is currently in preview and may have restricted availability.
-For more information, please [contact us](https://cratedb.com/contact).
-:::
+Capture (CDC), providing real-time synchronization of your data.
 
 ## Key Concepts
 
@@ -54,25 +49,28 @@ Supported authentication methods:
 
 The following steps should be performed in the MongoDB Atlas UI.
 
-#### Step 1: Create a Custom Role
+:::::{stepper}
+#### Create a Custom Role
 1. **Navigate to Database Access**
    Go to **Database Access** in the MongoDB Atlas UI for the cluster you want to
    connect to CrateDB Cloud.
 
 2. **Add a Custom Role**
-   Under **Custom Roles**, click **Add New Custom Role**.
+   Under **Custom Roles**, click **Add New Custom Role**. A form will appear.
 
-3. **Set Up Read-Only Access**
+3. Fill in the Custom Role Name - For example, use CrateDB CDC integration.
+
+4. **Set Up Read-Only Access**
    Assign the following actions or roles to the custom role:
-   - `find`
-   - `changeStream`
-   - `collStats`
+   - `find`, to be found under Collection Actions/Query and Write Actions
+   - `changeStream`, to be found under Collection Actions/Change Stream Actions
+   - `collStats`, to be found under Collection Actions/Diagnostic Actions
 
    Specify the databases and collections for these actions. You can update
    access permissions in the MongoDB Atlas UI later if needed.
 
 
-#### Step 2: Create a User
+#### Create a User
 
 Depending on whether you plan to use SCRAM or X.509 authentication, create a
 database user with one of the following methods:
@@ -113,7 +111,7 @@ database user with one of the following methods:
 :::
 
 
-#### Step 3: Configure IP Access
+#### Configure IP Access
 
 To allow CrateDB Cloud to access your MongoDB Atlas cluster, you must add the
 CrateDB Cloud IP addresses to the IP Access List in MongoDB Atlas.
@@ -124,26 +122,7 @@ CrateDB Cloud IP addresses to the IP Access List in MongoDB Atlas.
 2. **Add IP Address**
    Click **Add IP Address** and choose an IP address or range to allow access.
    For testing purposes, you can select **Allow Access from Anywhere**, but for
-   production, it is recommended to specify only the required IPs.
-
-:::{note}
-The specific IP addresses depend on the region of your CrateDB Cloud cluster.
-These IP addresses can also be found in the **Connection Details** section of the
-CrateDB Cloud Console, just before you click **Test Connection** during the
-setup process.
-
- **Outbound IP Addresses**:
-
-| Cloud Provider | Region        | IP Addresses                   |
-|----------------|---------------|---------------------------------|
-| Azure          | East US 2     | `52.184.241.228/32`, `52.254.31.90/32` |
-| Azure          | West Europe   | `51.105.153.175/32`, `108.142.34.5/32` |
-| AWS            | EU West 1     | `34.255.75.224`                |
-| AWS            | US East 1     | `54.197.229.58`                |
-| AWS            | US West 2     | `54.189.16.20`                 |
-| GCP            | US Central 1  | `34.69.134.49`                 |
-
-:::
+   production, it is recommended to specify only the required IPs. The form will show you the specific IP addresses you need to allow.
 
 :::{note}
 To set up a PrivateLink connection for the Mongo CDC integration, please reach
@@ -151,7 +130,7 @@ out to our support team.
 :::
 
 
-#### Step 4: Access Connection String
+#### Access Connection String
 
 You'll need to provide the connection string for your MongoDB Atlas cluster so
 that CrateDB Cloud can connect to it.
@@ -186,21 +165,21 @@ mongodb+srv:///?authMechanism=MONGODB-X509&retryWrites=true&w=majority
 Make sure to upload the X.509 certificate file when configuring the connection
 in CrateDB Cloud.
 :::
-
-
+:::::
 
 ### Set Up Integration in CrateDB Cloud
 
 Follow these steps in the CrateDB Cloud Console to set up the MongoDB CDC integration:
 
-#### Step 1: Create an Integration
+:::::{stepper}
+#### Create an Integration
 1. Navigate to the **Import** section in the CrateDB Cloud Console.
 2. Click **Create Integration** and select **MongoDB** as the source type.
 
-#### Step 2: Configure Connection
+#### Configure Connection
 1. Choose **Create New Connection** or select an existing one.
 2. Fill in the following details:
-   :::{tab} SCRAM Auhentication
+   :::{tab} SCRAM Authentication
    - **Connection Name**: Provide a unique name for the connection.
    - **Connection String**: Paste the connection string from MongoDB Atlas.
    - **Username**: Enter the database username (required for SCRAM).
@@ -214,15 +193,15 @@ Follow these steps in the CrateDB Cloud Console to set up the MongoDB CDC integr
    - **Default Database**: Specify the default database to use for this connection.
    :::
 
-#### Step 3: Test the Connection
+#### Test the Connection
 Click **Test Connection** to verify CrateDB Cloud can connect to your MongoDB
 Atlas cluster. Resolve any issues if the test fails.
 
-#### Step 4: Select Collection
+#### Select Collection
 Enter the database and collection name from your MongoDB Atlas cluster, that you
 want to sync with CrateDB Cloud.
 
-#### Step 5: Select Target Table
+#### Select Target Table
 1. Specify the target table in your CrateDB Cloud cluster where the data will be synced.
 2. MongoDB records will be inserted into an object column called `document`.
 3. Select the object type for the column:
@@ -234,32 +213,24 @@ want to sync with CrateDB Cloud.
    However, selecting `dynamic` provides faster query performance by utilizing indexes and columnar storage.
    :::
 
-#### Step 6: Configure Integration Settings
+#### Configure Integration Settings
 1. Enter a name for the integration.
 2. Select the integration mode:
    - **Full Load Only**: Imports the data once but doesn’t sync changes.
    - **Full Load and CDC**: Imports the data and syncs changes in real-time.
    - **CDC Only**: Syncs only new changes in real-time without importing existing data.
 
-#### Step 7: Create the Integration
+#### Create the Integration
 Click **Create Integration** to finalize the setup. CrateDB Cloud will now sync
 your MongoDB data based on the selected settings.
-
+:::::
 ---
-
-## Limitations
-
-The MongoDB CDC integration is available as a preview. The feature is stable
-enough for broader use but may still have limitations, known issues, or
-incomplete features. While suitable for many use cases, it is not yet
-recommended for mission-critical workloads.
-
 
 ### Column Name Restrictions
 
-Column or property names containing square brackets (`[]`) are not supported and
-are replaced with `__openbrk__` and `__closebrk__` respectively. Likewise, column
-names containing dots (`.`) are not supported and are replaced with (`__dot__`).
+Column or property names containing square brackets `[]` are not supported and
+are replaced with `_obkt_` and `_cbkt_` respectively. Likewise, column
+names containing dots `.` are not supported and are replaced with `_dot_`.
 
 :::{warning}
 This behavior may change in future releases.
@@ -275,5 +246,4 @@ CDC integration:
   value.
 - **Binary data types** other than UUIDs, which are converted to `TEXT` and
   **vectors**, which are converted to `ARRAY`s of numbers.
-- The `Decimal128` data type is not supported and is converted to a string, as
-  CrateDB does not support a decimal data type.
+- The `Decimal128` data type is not supported and is converted to a string.
