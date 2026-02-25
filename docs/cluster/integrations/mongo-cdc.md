@@ -2,7 +2,7 @@
 # MongoDB CDC
 
 CrateDB Cloud enables continuous data ingestion from MongoDB using Change Data
-Capture (CDC), providing seamless, real-time synchronization of your data.
+Capture (CDC), providing real-time synchronization of your data.
 
 ## Key Concepts
 
