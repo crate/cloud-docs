@@ -1,4 +1,4 @@
-(integrations-mongo-cdc)=
+(integrations-dynamo-cdc)=
 # DynamoDB CDC
 
 CrateDB Cloud enables continuous data ingestion from DynamoDB using Change Data
@@ -54,7 +54,7 @@ Please note that running a Kinesis data stream has additional costs that AWS wil
 6. Click the **Create new** button right to **Destination Kinesis data stream**.
 7. Fill in the **Data stream name*. Please note you will need this name later when setting up the integration in CrateDB Cloud. 
 8. Choose the capacity that best suits your needs.
-8. Choose a **Maximum record size* that can hold more than two times your biggest DynamoDB table items.
+8. Choose a **Maximum record size** that can hold more than two times your biggest DynamoDB table items.
 9. Click the button **Create data stream**.
 10. The Kinesis data stream has now been created. If you want to change its retention policy (recommended), click on the tab **Configuration**, then click on **Edit** under the **Data retention** section.
 11. Select the data retention that suits you. At least 7 days is recommended. Please note the data retention period will have an impact on the cost of the Kinesis Data Stream.
@@ -64,7 +64,7 @@ Please note that running a Kinesis data stream has additional costs that AWS wil
 
 ### Set Up Integration in CrateDB Cloud
 
-Follow these steps in the CrateDB Cloud Console to set up the MongoDB CDC integration:
+Follow these steps in the CrateDB Cloud Console to set up the DynamoDB CDC integration:
 
 :::::{stepper}
 #### Create an Integration
@@ -107,7 +107,7 @@ Follow these steps in the CrateDB Cloud Console to set up the MongoDB CDC integr
 
 #### Create the Integration
 Click **Create Integration** to finalize the setup. CrateDB Cloud will now sync
-your MongoDB data based on the selected settings.
+your DynamoDB data based on the selected settings.
 :::::
 ---
 
