@@ -82,9 +82,9 @@ Follow these steps in the CrateDB Cloud Console to set up the DynamoDB CDC integ
 #### Configure Integration Settings
 1. Enter a name for the integration.
 2. Select the integration mode:
-   - **Full Load Only**: Imports the data once but doesn’t sync changes.
-   - **Full Load and CDC**: Imports the data and syncs changes in real-time.
-   - **CDC Only**: Syncs only new changes in real-time without importing existing data.
+   - **Full load only**: Imports the data once but doesn’t sync changes.
+   - **Full load and CDC**: Imports the data and syncs changes in real-time.
+   - **CDC only**: Syncs only new changes in real-time without importing existing data.
 
 #### Select source
 1. Enter the AWS region name the DynamoDB table is in.
@@ -108,7 +108,6 @@ Follow these steps in the CrateDB Cloud Console to set up the DynamoDB CDC integ
 Click **Start import** to finalize the setup. CrateDB Cloud will now sync
 your DynamoDB data based on the selected settings.
 :::::
----
 
 ### Column Name Restrictions
 

@@ -216,9 +216,9 @@ want to sync with CrateDB Cloud.
 #### Configure Integration Settings
 1. Enter a name for the integration.
 2. Select the integration mode:
-   - **Full Load Only**: Imports the data once but doesn’t sync changes.
-   - **Full Load and CDC**: Imports the data and syncs changes in real-time.
-   - **CDC Only**: Syncs only new changes in real-time without importing existing data.
+   - **Full load only**: Imports the data once but doesn’t sync changes.
+   - **Full load and CDC**: Imports the data and syncs changes in real-time.
+   - **CDC only**: Syncs only new changes in real-time without importing existing data.
 
 #### Create the Integration
 Click **Create Integration** to finalize the setup. CrateDB Cloud will now sync

@@ -48,12 +48,13 @@ Currently, CrateDB Cloud supports ingestion from the following data source:
 More integrations are planned for future releases to expand the range of
 supported data sources and use cases.
 
-The data field names will be inferred and made compatible with CrateDB naming 
-restrictions automatically.
+The integration automatically make field names compatible with CrateDB naming 
+restrictions.
 
-The data field types will be inferred as new fields are discovered. If you require data
-to be cast to a specific type, simply create the CrateDB table with the columns and 
-types you want and the system will try to cast it to the types at the destination. 
+When a new data field is discovered, the integration will infer its data type.
+To cast data to specific types, simply create the column in CrateDB with the target type
+and. The integration will always try to cast the data to the type defined in the 
+CrateDB destination table. 
 
 :::
 ### Connection
@@ -75,7 +76,7 @@ There are 3 different integration types:
   source and applies them into your CrateDB table. Once it reaches the last CDC event 
   it waits for new events to come.
 - **Full load and CDC**
-  It imports all the data like the type __full load only__, but once that phase finishes
+  It imports all the data like the type **full load only**, but once that phase finishes
   it starts processing CDC events. If the source supports it, it will try to read CDC
   events starting from right when the import phase started. This way any data alteration
   during the import phase will be picked up and processed.
