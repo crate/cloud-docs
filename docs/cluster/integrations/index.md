@@ -21,7 +21,7 @@ setup or maintenance of separate ETL pipelines.
 :hidden:
 
 MongoDB CDC <mongo-cdc>
-DynamoDB CDC <integrations-dynamo-cdc>
+DynamoDB CDC <dynamo-cdc>
 
 :::
 
