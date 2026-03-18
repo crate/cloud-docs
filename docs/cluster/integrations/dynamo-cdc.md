@@ -44,7 +44,6 @@ Supported authentication methods:
 This setup is only required if you want to enable the Continuous Sync.
 Please note that running a Kinesis data stream has additional costs that AWS will charge you directly.
 
-:::::{stepper}
 #### Set up a Kinesis Data Stream for CDC in AWS
 1. In the **AWS console**, go to **DynamoDB**.
 2. Go to **Tables**.
@@ -58,7 +57,7 @@ Please note that running a Kinesis data stream has additional costs that AWS wil
 9. Click the button **Create data stream**.
 10. The Kinesis data stream has now been created. If you want to change its retention policy (recommended), click on the tab **Configuration**, then click on **Edit** under the **Data retention** section.
 11. Select the data retention that suits you. At least 7 days is recommended. Please note the data retention period will have an impact on the cost of the Kinesis Data Stream.
-12. Back to the **Stream to an Amazon Kinesis data stream* DynamoDB page, select the newly created Kinesis Stream from the list.
+12. Back to the **Stream to an Amazon Kinesis data stream** DynamoDB page, select the newly created Kinesis Stream from the list.
 13. Click on **Turn on stream**.
 
 
@@ -106,7 +105,7 @@ Follow these steps in the CrateDB Cloud Console to set up the DynamoDB CDC integ
 
 
 #### Create the Integration
-Click **Create Integration** to finalize the setup. CrateDB Cloud will now sync
+Click **Start import** to finalize the setup. CrateDB Cloud will now sync
 your DynamoDB data based on the selected settings.
 :::::
 ---
