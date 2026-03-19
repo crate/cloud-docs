@@ -174,10 +174,10 @@ Follow these steps in the CrateDB Cloud Console to set up the MongoDB CDC integr
 :::::{stepper}
 #### Create an Integration
 1. Navigate to the **Import** section in the CrateDB Cloud Console.
-2. Click **Create Integration** and select **MongoDB** as the source type.
+2. Click on the **MongoDB** button.
 
 #### Configure Connection
-1. Choose **Create New Connection** or select an existing one.
+1. Choose which connection type to create or select an existing one.
 2. Fill in the following details:
    :::{tab} SCRAM Authentication
    - **Connection Name**: Provide a unique name for the connection.

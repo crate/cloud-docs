@@ -68,10 +68,10 @@ Follow these steps in the CrateDB Cloud Console to set up the DynamoDB CDC integ
 :::::{stepper}
 #### Create an Integration
 1. Navigate to the **Import** section in the CrateDB Cloud Console.
-2. Click **Create Integration** and select **DynamoDB** as the source type.
+2. Click on the **DynamoDB** button.
 
-#### Configure Connection
-1. Choose **Create New Secret** or select an existing one.
+#### Configure Secret
+1. Choose **Add Secret** or select an existing one.
 2. Fill in the following details:
    :::{tab} AWS Secret
    - **Secret Name**: Provide a unique name for the secret.
