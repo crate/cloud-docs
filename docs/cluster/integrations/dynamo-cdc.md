@@ -51,7 +51,7 @@ Please note that running a Kinesis data stream has additional costs that AWS wil
 4. Click on the **Exports and streams** tab.
 5. On the **Amazon Kinesis data stream details** section, click the button **Turn On**.
 6. Click the **Create new** button right to **Destination Kinesis data stream**.
-7. Fill in the **Data stream name*. Please note you will need this name later when setting up the integration in CrateDB Cloud. 
+7. Fill in the **Data stream name**. Please note you will need this name later when setting up the integration in CrateDB Cloud. 
 8. Choose the capacity that best suits your needs.
 8. Choose a **Maximum record size** that can hold more than two times your biggest DynamoDB table items.
 9. Click the button **Create data stream**.
