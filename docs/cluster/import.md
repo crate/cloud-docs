@@ -13,6 +13,7 @@ Currently the following data formats are supported:
 - JSON (JSON-Lines, JSON Arrays, and JSON Documents)
 - Parquet
 - MongoDB collection
+- DynamoDB
 
 :::{note}
 If you don't have a dataset prepared, we also provide sample data to let 

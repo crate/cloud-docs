@@ -174,10 +174,10 @@ Follow these steps in the CrateDB Cloud Console to set up the MongoDB CDC integr
 :::::{stepper}
 #### Create an Integration
 1. Navigate to the **Import** section in the CrateDB Cloud Console.
-2. Click **Create Integration** and select **MongoDB** as the source type.
+2. Click on the **MongoDB** button.
 
 #### Configure Connection
-1. Choose **Create New Connection** or select an existing one.
+1. Choose which connection type to create or select an existing one.
 2. Fill in the following details:
    :::{tab} SCRAM Authentication
    - **Connection Name**: Provide a unique name for the connection.
@@ -216,9 +216,9 @@ want to sync with CrateDB Cloud.
 #### Configure Integration Settings
 1. Enter a name for the integration.
 2. Select the integration mode:
-   - **Full Load Only**: Imports the data once but doesn’t sync changes.
-   - **Full Load and CDC**: Imports the data and syncs changes in real-time.
-   - **CDC Only**: Syncs only new changes in real-time without importing existing data.
+   - **Full load only**: Imports the data once but doesn’t sync changes.
+   - **Full load and CDC**: Imports the data and syncs changes in real-time.
+   - **CDC only**: Syncs only new changes in real-time without importing existing data.
 
 #### Create the Integration
 Click **Create Integration** to finalize the setup. CrateDB Cloud will now sync
