@@ -71,6 +71,12 @@ applied.
 The payment cycle is monthly and aligns with the calendar month. You will be charged
 for the previous period's usage and will receive an invoice at the email address
 you provided. If needed, you can add a new credit card to replace the current one.
+
+:::{tip}
+For customers with a billing address in the European Union, these payments are 
+processed by Stripe and invoiced in Euros at a monthly USD/EUR exchange rate, 
+which is listed in each invoice.
+:::
 ::::
 
 ::::{tab} Bank Transfer
@@ -95,11 +101,10 @@ for the previous period's usage, and an invoice will be sent to the email addres
 you provided. Payment is due within the specified terms.
 
 :::{caution}
-**Bank transfer payment is currently available only within the EU.**
+**Bank transfer payment is currently available only within the European Union.**
 
-These payments are processed by Stripe and invoiced in Euros at a fixed USD/EUR 
-exchange rate. You can find the current exchange rate within the CrateDB Cloud
-Console after setting up the bank transfer payment method.
+These payments are processed by Stripe and invoiced in Euros at a monthly 
+USD/EUR exchange rate, which is listed in each invoice.
 :::
 
 ::::
