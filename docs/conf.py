@@ -16,6 +16,7 @@ linkcheck_ignore = [
     "https://hub.docker.com/",
     # unauthorized
     "https://portal.aws.amazon.com/",
+    "https://console.cratedb.cloud/api/docs",
 ]
 
 linkcheck_timeout = 5
