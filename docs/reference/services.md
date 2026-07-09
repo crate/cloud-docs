@@ -50,7 +50,7 @@ _large production workloads_
 
 - Any cluster size
 - Custom compute options
-- Dedicated master nodes
+- {ref}`Dedicated master nodes <dedicated-master-nodes>`
 - Unlimited Storage
 - Custom Backups
 - Premium Support
@@ -152,6 +152,47 @@ zones, and three or more nodes utilize all three availability zones, with nodes
 distributed as uniformly as possible. While a node count that is a multiple of
 three (e.g., 3, 6, 9, 12, etc.) provides optimal distribution across zones, it
 is not strictly required for high availability.
+
+
+(dedicated-master-nodes)=
+## Dedicated master nodes
+
+By default, every node in a cluster is master-eligible: on top of storing and
+querying data, any node can be elected to manage the cluster state—keeping
+track of which nodes are members, where shards live, and coordinating changes
+to that metadata. On smaller clusters this shared arrangement works fine. On
+large or busy clusters it can work against you, because the elected master
+competes for CPU and memory with the same query and ingest traffic it is meant
+to coordinate—the data node under the most load is also the one holding the
+cluster together.
+
+Dedicated master nodes split those two jobs apart. The cluster runs a small,
+separate pool of nodes that only manage the cluster state; they hold no data
+and answer no queries, so coordination stays responsive no matter how hard the
+data nodes are working. In practice this means steadier cluster management and
+cleaner failover on larger deployments.
+
+**When to use them**<br>
+Consider dedicated master nodes once a cluster grows past a handful of data
+nodes, sustains heavy ingest or query load, or has strict availability
+requirements. Smaller clusters don't need them—the data nodes take on the
+master role without any trouble.
+
+**How they work**<br>
+- You opt into dedicated master nodes when deploying a cluster. They are
+  available on the larger dedicated sizes (CR3 and up).
+- The pool always runs an odd number of nodes—three by default, optionally
+  five—so a master can always be elected by a majority (quorum). An even number
+  adds cost without improving fault tolerance, so it isn't offered.
+- Master nodes are distributed across availability zones like data nodes, and
+  each is deployed with its own storage. Their size and count are set when the
+  cluster is created and stay fixed when you scale the data nodes up or down.
+
+**Billing**<br>
+Dedicated masters are billed as additional nodes: compute for each master while
+the cluster is running, plus their storage. Suspending a cluster pauses master
+compute along with the data nodes; master storage keeps being billed, the same
+way data storage does. See {ref}`billing <organization-billing>` for details.
 
 
 ## Custom

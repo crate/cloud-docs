@@ -6,6 +6,7 @@ Changes
 Unreleased
 ==========
 
+- Document dedicated master nodes on the Services page
 - Consolidate ``cloud-reference``, ``cloud-howtos``, and ``cloud-tutorials``
 - Adjust links to accompany renaming to ``cloud-docs``
 - Adjust intersphinx references to accompany consolidation into single repository
