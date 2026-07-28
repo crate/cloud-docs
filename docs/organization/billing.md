@@ -73,8 +73,11 @@ for the previous period's usage and will receive an invoice at the email address
 you provided. If needed, you can add a new credit card to replace the current one.
 
 :::{tip}
-For customers with a billing address in the European Union, these payments are 
-processed by Stripe and invoiced in Euros at a monthly USD/EUR exchange rate, 
+Clusters running on AWS, Azure, or GCP are invoiced in USD, while clusters
+running on StackIT are invoiced in EUR.
+
+For customers with a billing address in the European Union, USD invoices are
+processed by Stripe and issued in Euros at a monthly USD/EUR exchange rate,
 which is listed in each invoice.
 :::
 ::::
@@ -103,8 +106,11 @@ you provided. Payment is due within the specified terms.
 :::{caution}
 **Bank transfer payment is currently available only within the European Union.**
 
-These payments are processed by Stripe and invoiced in Euros at a monthly 
-USD/EUR exchange rate, which is listed in each invoice.
+Clusters running on AWS, Azure, or GCP are invoiced in USD, while clusters
+running on StackIT are invoiced in EUR.
+
+USD invoices are processed by Stripe and issued in Euros at a monthly USD/EUR 
+exchange rate, which is listed in each invoice.
 :::
 
 ::::
