@@ -19,7 +19,7 @@ privileges to execute scheduled tasks and persists data in the `gc` schema.
 
 The SQL Scheduler is designed to automate routine database tasks by scheduling
 SQL queries to run at specific times, in UTC time. This feature supports
-creating job descriptions with valid [cron patterns](https://www.ibm.com/docs/en/db2oc?topic=task-unix-cron-format)
+creating job descriptions with valid [cron patterns](https://www.ibm.com/docs/en/db2-as-a-service?topic=task-unix-cron-format)
 and SQL statements, enabling a wide range of tasks. Users can manage these jobs
 through the Cloud UI, adding, removing, editing, activating, and deactivating
 them as needed.
