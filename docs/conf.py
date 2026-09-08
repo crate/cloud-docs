@@ -17,6 +17,7 @@ linkcheck_ignore = [
     # unauthorized
     "https://portal.aws.amazon.com/",
     "https://console.cratedb.cloud/api/docs",
+    "https://www.ibm.com/docs/en/db2-as-a-service",
 ]
 
 linkcheck_timeout = 5
