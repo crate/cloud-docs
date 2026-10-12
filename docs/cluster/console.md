@@ -15,7 +15,7 @@ against their CrateDB cluster. The Console can be accessed by users having the
 :::{important}
 - The Console is available for all newly deployed clusters.
 - For older clusters, this feature can be enabled on demand. Contact 
-  [support](https://support.crate.io/) for activation.
+  [support](https://support.cratedb.com/) for activation.
   
 The Console currently utilizes a dedicated database user `gc_admin` with full 
 cluster privileges.

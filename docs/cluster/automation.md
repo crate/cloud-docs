@@ -9,7 +9,7 @@ and optimization of database tasks.
 :::{important}
 - Automation is available for all newly deployed clusters.
 - For existing clusters, the feature can be enabled on demand. (Contact
-  [support](https://support.crate.io/) for activation.)
+  [support](https://support.cratedb.com/) for activation.)
 
 Automation utilizes a dedicated database user `gc_admin` with full cluster
 privileges to execute scheduled tasks and persists data in the `gc` schema.
@@ -124,7 +124,7 @@ ruleset.
 
 ### Overview
 
-Table policy overview can be found in the left-hand navigation menu under
+The table policy overview can be found in the left-hand navigation menu under
 "Automation". From the list of policies, you can create, delete, edit, or
 (de)activate them. Logs of executed policies can be found in the "Logs" tab.
 
@@ -132,15 +132,12 @@ Table policy overview can be found in the left-hand navigation menu under
 
 A new policy can be created with the "Add New Policy" button.
 
-![Table policy list](../_assets/img/cluster-table-policy-create.png)
+![Table policy list](../_assets/img/cluster-table-policy-edit.png)
 
-After naming the policy and selecting the tables/schemas to be impacted, you
+After naming the policy and selecting the table to be impacted, you
 must specify the time column. This column, which should be a timestamp used for
-partitioning, will determine the data affected by the policy. It is important
-that this time column is consistently present across all targeted tables/schemas.
-While you can apply the policy to tables without the specified time column,
-it will not get executed for those. If your tables have different timestamp
-columns, consider setting up separate policies for each to ensure accuracy.
+partitioning, will determine the data affected by the policy. If you have multiple 
+partitioned tables you will need to setup a policy per table.
 
 :::{note}
 The "Time Column" must be of type `TIMESTAMP`.
@@ -149,7 +146,7 @@ The "Time Column" must be of type `TIMESTAMP`.
 Next, a condition is used to determine affected partitions. The system is
 time-based. A partition is eligible for action if the value in the partitioned
 column is smaller (`<`), or smaller or equal (`<=`) than the current date minus
-`n` days, months, or years.
+`n` hours, days, weeks, months, or years.
 
 ### Actions
 
@@ -158,14 +155,14 @@ Following actions are supported:
 * **Set replicas:** Changes the replication factor of eligible partitions.
 * **Force merge:** Merges segments on eligible partitions to ensure a specified number.
 
-After filling out the info, you can see the affected schemas/tables and the
-number of affected partitions if the policy gets executed at this very moment.
+After filling out the info, you can see the number of partitions that will be affected 
+if the policy gets executed now.
 
 ### Examples
 
 Consider a scenario where you have a table and want to optimize space on your
 cluster. For older data (e.g., 30 days), which may have already been snapshotted
-and is only accessed infrequently, meaning it's not used for live analyitcs, it
+and is only accessed infrequently, meaning it's not used for live analytics, it
 might be sufficient for it to exist just once in the cluster without replication.
 Additionally, you may not want to retain data older than 60 days.
 
