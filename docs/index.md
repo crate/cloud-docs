@@ -228,7 +228,7 @@ Learn about all compatible client applications, frameworks, and tools.
 [Auditing]: https://cratedb.com/product/features/auditing
 [AWS Marketplace]: https://aws.amazon.com/marketplace/pp/prodview-l7rqf2xpeaubk
 [Azure Marketplace]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=overview
-[CCPA]: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.140.
+[CCPA]: https://oag.ca.gov/privacy/ccpa
 [Database Features]: https://cratedb.com/docs/guide/feature/
 [Encryption]: https://cratedb.com/product/features/data-encryption
 [GCP Marketplace]: https://console.cloud.google.com/marketplace/product/cratedb-public/cratedb-gcp
