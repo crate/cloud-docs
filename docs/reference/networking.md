@@ -29,5 +29,6 @@ CrateDB Cloud **may update outbound IPs periodically** as infrastructure evolves
 | **AWS**          | US East 1 (us-east-1)       | `54.197.229.58`                         |
 | **AWS**          | US West 2 (us-west-2)       | `54.189.16.20`                          |
 | **GCP**          | US Central 1 (us-central1)  | `34.69.134.49`                          |
+| **STACKIT**      | EU01 - Germany (ske1.eu01)  | `192.214.176.25/32`                     |
 
 

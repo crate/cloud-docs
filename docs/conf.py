@@ -17,6 +17,8 @@ linkcheck_ignore = [
     # unauthorized
     "https://portal.aws.amazon.com/",
     "https://console.cratedb.cloud/api/docs",
+    # 403 for non-browser clients (bot protection)
+    "https://www.ibm.com/docs/",
 ]
 
 linkcheck_timeout = 5
