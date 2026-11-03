@@ -1,17 +1,12 @@
 (cluster-automation)=
 # Automation
 
-Automation in CrateDB Cloud allows users to streamline and manage routine
+Automation allows users to streamline and manage routine
 database operations efficiently. Two primary automation features available are
 the SQL Scheduler and Table Policies, both of which facilitate the maintenance
 and optimization of database tasks.
 
-:::{important}
-- Automation is available for all newly deployed clusters.
-- For existing clusters, the feature can be enabled on demand. (Contact
-  [support](https://support.cratedb.com/) for activation.)
-
-Automation utilizes a dedicated database user `gc_admin` with full cluster
+Automation utilizes a dedicated database user with full cluster
 privileges to execute scheduled tasks and persists data in the `gc` schema.
 :::
 
@@ -20,9 +15,8 @@ privileges to execute scheduled tasks and persists data in the `gc` schema.
 The SQL Scheduler is designed to automate routine database tasks by scheduling
 SQL queries to run at specific times, in UTC time. This feature supports
 creating job descriptions with valid [cron patterns](https://www.ibm.com/docs/en/db2-as-a-service?topic=task-unix-cron-format)
-and SQL statements, enabling a wide range of tasks. Users can manage these jobs
-through the Cloud UI, adding, removing, editing, activating, and deactivating
-them as needed.
+and SQL statements, enabling a wide range of tasks. Users can manage these jobs 
+by adding, removing, editing, activating, and deactivating them as needed.
 
 ### Use Cases
 
@@ -137,7 +131,7 @@ A new policy can be created with the "Add New Policy" button.
 After naming the policy and selecting the table to be impacted, you
 must specify the time column. This column, which should be a timestamp used for
 partitioning, will determine the data affected by the policy. If you have multiple 
-partitioned tables you will need to setup a policy per table.
+partitioned tables you will need to set up a policy per table.
 
 :::{note}
 The "Time Column" must be of type `TIMESTAMP`.

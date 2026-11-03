@@ -1,7 +1,7 @@
 (cluster-console)=
 # Console
 
-The Console in CrateDB Cloud allows users to execute SQL queries seamlessly
+The Console allows users to execute SQL queries seamlessly
 against their CrateDB cluster. The Console can be accessed by users having the
 "Organization Admin" role in the left-hand navigation menu within a cluster.
 
@@ -12,15 +12,6 @@ against their CrateDB cluster. The Console can be accessed by users having the
 - **Multiple Query Execution:** Run several queries in sequence.
 - **Query History:** Access and manage your past queries.
 
-:::{important}
-- The Console is available for all newly deployed clusters.
-- For older clusters, this feature can be enabled on demand. Contact 
-  [support](https://support.cratedb.com/) for activation.
-  
-The Console currently utilizes a dedicated database user `gc_admin` with full 
-cluster privileges.
-:::
-
 :::{note}
 **Multi-Query Execution:**
 When running multiple queries at once, the Console executes them sequentially, 
@@ -30,7 +21,7 @@ between queries.
 :::
 
 :::{note}
-Each CrateDB Cloud cluster offers a dedicated {ref}`Admin UI <crate-admin-ui:index>`,
+Each cluster offers a dedicated {ref}`Admin UI <crate-admin-ui:index>`,
 which can be used to explore data, schema metadata, and cluster status
 information.
 :::
