@@ -5,11 +5,11 @@ build:
 
 sphinx:
   builder: html
-  configuration: ./conf.py
+  configuration: cratedb-ee-docs/conf.py
   fail_on_warning: true
 
 python:
   install:
-    - requirements: ./requirements.txt
+    - requirements: cratedb-ee-docs/requirements.txt
 
 version: 2
