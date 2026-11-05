@@ -8,5 +8,4 @@ html_baseurl = "https://cratedb.com/%s/" % url_path
 
 exclude_patterns += ["_build", "Thumbs.db", ".DS_Store"]
 
-extensions = ['myst_parser']
 source_suffix = ['.rst', '.md']
