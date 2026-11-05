@@ -1,1 +1,2 @@
 crate-docs-theme>=0.50.3
+myst-parser<5
