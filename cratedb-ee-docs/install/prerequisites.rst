@@ -13,6 +13,8 @@ CrateDB EE console has the following requirements:
 - The machine where the CrateDB EE console is to be installed must be able to reach the Internet to download the package.
 - Requires being able to modify the configuration of all CrateDB nodes.
 - Requires restarting all CrateDB nodes.
+- If a truststore is not already present in the CrateDB cluster, files must be copied to all CrateDB nodes.
+- Please note the use of CrateDB Cloud clusters is not supported.
 
 Preparing the CrateDB cluster for the installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -20,7 +22,7 @@ Preparing the CrateDB cluster for the installation
 The installation requires a CrateDB user that can authenticate from the machine where the
 installation will take place.
 
-That user needs the privilege ``AL`` because it will create new users.
+That user needs the privilege ``AL`` to create new users and ``DQL`` to perform several checks.
 
 For more information about privileges you can read the `CrateDB privileges documentation <https://cratedb.com/docs/crate/reference/en/latest/admin/privileges.html#administration-privileges>`_.
 You will need to create a user if none is available yet.
@@ -30,7 +32,7 @@ This can be done with the following SQL statement:
 .. code-block:: sql
 
    CREATE USER <username> WITH (password = '<password>');
-   GRANT AL TO <username>;
+   GRANT AL, DQL TO <username>;
 
 If your CrateDB configuration already has host based authentication you may need to add a new
 configuration entry to be able to authenticate with the user from the target machine.
