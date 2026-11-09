@@ -106,7 +106,7 @@ It looks similar to:
    - -Cssl.keystore_key_password=<keystore password>
    - -Cssl.truststore_filepath=<path to truststore.p12 on the CrateDB node>
    - -Cssl.truststore_password=<truststore password>
-   - -Cauth.host_based.config.10_ee_console.user=grand_central
+   - -Cauth.host_based.config.10_ee_console.user=cratedb_ee
    - -Cauth.host_based.config.10_ee_console.ssl=on
    - -Cauth.host_based.config.10_ee_console.method=cert
    - -Cauth.host_based.config.20_issuer.address=<cratedb-ee-console-host>/32
