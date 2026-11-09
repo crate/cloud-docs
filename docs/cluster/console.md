@@ -2,8 +2,7 @@
 # Console
 
 The Console allows users to execute SQL queries seamlessly
-against their CrateDB cluster. The Console can be accessed by users having the
-"Organization Admin" role in the left-hand navigation menu within a cluster.
+against their CrateDB cluster.
 
 - **Table and Schema Tree View:** Easily navigate through your database 
   structure.
