@@ -205,6 +205,15 @@ To apply any change to the configuration, the following commands must be execute
 Troubleshooting
 -----------------
 
+Access the CrateDB EE Console logs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The logs can be explored using the following command:
+
+.. code-block:: bash
+
+   sudo journalctl --output=with-unit -t cratedb-ee-console
+
 Login failures
 ~~~~~~~~~~~~~~~~
 
@@ -215,10 +224,6 @@ The most common issues related to login failures are:
 - A CrateDB authentication configuration rule is not correct.
 
 Look for login issues in the CrateDB logs.
-Alternatively, look for login issues in the CrateDB Enterprise Console minter:
-
-.. code-block:: bash
-
-   journalctl -u systemctl status minter
+Alternatively, look for login issues in the CrateDB Enterprise Console logs.
 
 Make sure the IP specified in the CrateDB configuration and the IP of the CrateDB Enterprise Console seen by the CrateDB cluster are the same.
