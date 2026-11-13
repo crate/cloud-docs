@@ -24,4 +24,5 @@ linkcheck_ignore = [
     "https://www.ibm.com/docs/",
 ]
 
+
 linkcheck_timeout = 5
