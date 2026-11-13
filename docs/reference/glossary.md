@@ -95,7 +95,7 @@ documentation is an entity that reads event data from an IoT hub. It is
 possible to use a consumer, such as Azure IoT Hub, with CrateDB Cloud:
 you can store the data processed by the consumer on the Cloud
 {ref}`cluster <gloss-cluster>`. For a tutorial
-on how to do this, see [documentation examples](https://cratedb.com/docs/crate/howtos/en/latest/reference-architectures/cratedb-azure-iot.html).
+on how to do this, see [documentation examples](https://docs.cratedb.com/projects/guide/solution/industrial/azure-iot.html).
 Operations on consumers are registered in the
 {ref}`Audit Log <gloss-audit-log>`.
 
