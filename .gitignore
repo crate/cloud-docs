@@ -5,3 +5,5 @@
 .env
 .idea
 *.lint
+cratedb-ee-docs/.env
+cratedb-ee-docs/_build

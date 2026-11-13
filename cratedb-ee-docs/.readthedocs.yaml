@@ -1,0 +1,15 @@
+build:
+  os: "ubuntu-22.04"
+  tools:
+    python: "3.11"
+
+sphinx:
+  builder: html
+  configuration: cratedb-ee-docs/conf.py
+  fail_on_warning: true
+
+python:
+  install:
+    - requirements: cratedb-ee-docs/requirements.txt
+
+version: 2

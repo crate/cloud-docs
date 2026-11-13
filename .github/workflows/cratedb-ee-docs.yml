@@ -1,0 +1,35 @@
+name: cratedb-ee-docs
+on:
+  pull_request: ~
+  push:
+    branches:
+      - main
+  
+  # Allow job to be triggered manually.
+  workflow_dispatch:
+  
+# Cancel in-progress jobs when pushing to the same branch.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  documentation:
+    name: Build CrateDB EE docs on ubuntu-latest
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Acquire sources
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: 'pip'
+          cache-dependency-path: |
+            cratedb-ee-docs/requirements.txt
+      
+      - name: Build CrateDB EE docs
+        run: |
+          cd cratedb-ee-docs && make check

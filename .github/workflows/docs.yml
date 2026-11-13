@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   documentation:
-    name: Build docs on ubuntu-latest
+    name: Build Cloud docs on ubuntu-latest
     runs-on: ubuntu-latest
 
     steps:
@@ -30,6 +30,6 @@ jobs:
           cache-dependency-path: |
             docs/requirements.txt
       
-      - name: Build docs
+      - name: Build Cloud docs
         run: |
           cd docs && make check
