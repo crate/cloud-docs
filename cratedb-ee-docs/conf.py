@@ -1,4 +1,4 @@
-from crate.theme.rtd.conf import *
+from crate.theme.rtd.conf.cratedb_ee import *
 
 # Disable version chooser.
 html_context.update({
@@ -6,12 +6,6 @@ html_context.update({
     "current_version": None,
     "versions": [],
 })
-
-project = "CrateDB Enterprise Edition"
-html_title = project
-
-url_path = "docs/crate/enterprise"
-html_baseurl = "https://cratedb.com/%s/" % url_path
 
 exclude_patterns += ["_build", "Thumbs.db", ".DS_Store"]
 
