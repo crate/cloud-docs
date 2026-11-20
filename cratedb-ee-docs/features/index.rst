@@ -15,3 +15,4 @@ In addition to that, the following you can also find the following features:
 
    console
    automation
+   backups/index
